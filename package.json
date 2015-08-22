@@ -1,0 +1,6 @@
+{
+  "name": "eventAggregator",
+  "jspm": {
+  	"format": "es6"
+  }
+}
