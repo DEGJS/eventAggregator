@@ -1,7 +1,16 @@
 {
   "name": "eventAggregator",
+  "version": "1.0.0",
+  "description": "Publish and subscribe to events across modules.",
+  "author": "DEG (http://degdigital.com)",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/DEGJS/eventAggregator.git"
+    },
   "jspm": {
   	"format": "es6",
-  	"registry": "jspm"
+  	"registry": "jspm",
+  	"main": "eventAggregator",
+  	"files": ["eventAggregator.js"]
   }
 }
