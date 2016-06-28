@@ -1,16 +1,27 @@
 {
-  "name": "eventAggregator",
-  "version": "1.0.0",
-  "description": "Publish and subscribe to events across modules.",
-  "author": "DEG (http://degdigital.com)",
-  "repository": {
+    "name": "eventAggregator",
+    "version": "1.0.1",
+    "description": "Publish and subscribe to events across modules.",
+    "keywords": [
+    	"events",
+        "DEGJS"
+    ],
+    "author": {
+        "name": "Ryan Heap",
+        "email": "rheap@degdigital.com"
+    },
+    "license": "MIT",
+    "repository": {
         "type": "git",
         "url": "https://github.com/DEGJS/eventAggregator.git"
     },
-  "jspm": {
-  	"format": "es6",
-  	"registry": "jspm",
-  	"main": "eventAggregator",
-  	"files": ["eventAggregator.js"]
-  }
+    "bugs": "https://github.com/DEGJS/eventAggregator/issues",
+    "jspm": {
+        "registry": "jspm",
+        "format": "es6",
+        "main": "eventAggregator.js",
+        "directories": {
+            "lib": "src"
+        }
+    }
 }
