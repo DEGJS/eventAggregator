@@ -1,6 +1,6 @@
 {
     "name": "eventAggregator",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Publish and subscribe to events across modules.",
     "keywords": [
     	"events",
