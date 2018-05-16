@@ -66,5 +66,6 @@ The event to publish. If the parameter is a `String`, it should be the name of t
 Breakpoints depends on the following browser APIs:
 + [Array.indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
 + [Array.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
++ [Array.isArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray)
 
 To support legacy browsers, you'll need to include polyfills for the above APIs.

@@ -1,48 +1,52 @@
-let eventAggregator = function() {
-	var listeners = {};
+const eventAggregator = () => {
+	
+    let listeners = {};
 
-	function subscribe(eventType, listener) {
-		if (typeof listeners[eventType] == "undefined"){
+	const subscribe = (eventType, listener) => {
+		if (typeof listeners[eventType] === 'undefined') {
             listeners[eventType] = [];
         }
-
         listeners[eventType].push(listener);
 	}
 
-	function unsubscribe(eventType, listener) {
-		if (listeners[eventType] instanceof Array){
-            var index = listeners[eventType].indexOf(listener);
-           	if(index >= 0)
+	const unsubscribe = (eventType, listener) => {
+		if (Array.isArray(listeners[eventType])) {
+            const index = listeners[eventType].indexOf(listener);
+           	if (index >= 0) {
            		listeners[eventType].splice(index, 1);            
+            }
         }
 	}
 
-	function publish(evt) {
-		if (typeof evt == "string"){
-            evt = { type: evt };
+	const publish = (evt, payload = {}) => {
+		if (typeof evt === 'string') {
+            evt = {
+                ...{
+                    type: evt
+                },
+                ...payload
+            };
         }
-        if (!evt.target){
+        if (!evt.target) {
             evt.target = this;
         }
 
-        if (!evt.type){  //falsy
-            throw new Error("Event object missing 'type' property.");
+        if (!evt.type) {  //falsey
+            throw new Error(`Event object missing 'type' property.`);
         }
 
-        if (listeners[evt.type] instanceof Array){
-        	listeners[evt.type].forEach(listener => {
-        		listener.call(this, evt);
-        	});
+        if (Array.isArray(listeners[evt.type])) {
+        	listeners[evt.type].forEach(listener => listener.call(this, evt));
         }
 	}
 
 	return {
-		subscribe: subscribe,
-		unsubscribe: unsubscribe,
-		publish: publish
+		subscribe,
+		unsubscribe,
+		publish
 	};
 };
 
-var instance = eventAggregator();
+const instance = eventAggregator();
 
 export default instance;
