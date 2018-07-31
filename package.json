@@ -1,9 +1,9 @@
 {
-    "name": "eventAggregator",
+    "name": "@degjs/event-aggregator",
     "version": "1.0.3",
     "description": "Publish and subscribe to events across modules.",
     "keywords": [
-    	"events",
+        "events",
         "DEGJS"
     ],
     "author": {
@@ -23,5 +23,27 @@
         "directories": {
             "lib": "src"
         }
-    }
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-env": "^2.4.1",
+        "jest": "^23.4.2"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "jest": {
+        "testPathIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "testURL": "http://localhost"
+    },
+    "babel": {
+        "presets": [
+            "env"
+        ]
+    }, 
+    "publishConfig": {
+		"access": "public"
+	}
 }
