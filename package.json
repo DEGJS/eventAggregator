@@ -1,6 +1,6 @@
 {
     "name": "@degjs/event-aggregator",
-    "version": "1.0.4",
+    "version": "2.0.0",
     "description": "Publish and subscribe to events across modules.",
     "keywords": [
         "events",
