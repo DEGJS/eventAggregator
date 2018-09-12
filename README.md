@@ -4,18 +4,16 @@
 EventAggregator is a module that acts as a single source of events for objects that wish to publish and/or subscribe to events. This module was heavily inspired by Eric Elliot and his excellent book [Programming JavaScript Applications](http://chimera.labs.oreilly.com/books/1234000000262/). Go read it.
 
 ## Install
-EventAggregator is an ES6 module. Consequently, you'll need an ES6 transpiler ([Babel](https://babeljs.io) is a nice one) and a module loader ([SystemJS](https://github.com/systemjs/systemjs) will do the job) as part of your Javascript workflow.
-
-If you're already using the [JSPM package manager](http://jspm.io) for your project, you can install EventAggregator with the following command:
-
+Install eventAggregator from NPM with command:
 ```
-$ jspm install github:DEGJS/eventAggregator
+$ npm install @degjs/event-aggregator
 ```
+
 
 ## Usage
 EventAggregator is a singleton, so it does not need to be instantiated.
 ```js
-import eventAggregator from "DEGJS/eventAggregator";
+import eventAggregator from "@degjs/event-aggregator";
 
 function onSomeEvent(e) {
     console.log(e);
