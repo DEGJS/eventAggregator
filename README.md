@@ -1,5 +1,5 @@
 # eventAggregator
-[![Build Status](https://travis-ci.org/DEGJS/eventAggregator.svg?branch=master)](https://travis-ci.org/DEGJS/eventAggregator)
+![Run Tests](https://github.com/DEGJS/eventAggregator/workflows/Run%20Tests/badge.svg)
 
 EventAggregator is a module that acts as a single source of events for objects that wish to publish and/or subscribe to events. This module was heavily inspired by Eric Elliot and his excellent book [Programming JavaScript Applications](http://chimera.labs.oreilly.com/books/1234000000262/). Go read it.
 
